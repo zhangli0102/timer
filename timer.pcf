@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Jan 14 18:22:58 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLK" LOCATE = SITE "D9" LEVEL 1;
+COMP "switch_cancel" LOCATE = SITE "K18" LEVEL 1;
+COMP "SEG<0>" LOCATE = SITE "A5" LEVEL 1;
+COMP "SEG<1>" LOCATE = SITE "C6" LEVEL 1;
+COMP "SEG<2>" LOCATE = SITE "D6" LEVEL 1;
+COMP "SEG<3>" LOCATE = SITE "C5" LEVEL 1;
+COMP "SEG<4>" LOCATE = SITE "C4" LEVEL 1;
+COMP "SEG<5>" LOCATE = SITE "A4" LEVEL 1;
+COMP "SEG<6>" LOCATE = SITE "B4" LEVEL 1;
+COMP "SEG<7>" LOCATE = SITE "A3" LEVEL 1;
+COMP "BUZZER" LOCATE = SITE "U7" LEVEL 1;
+COMP "switch_start_stop" LOCATE = SITE "L18" LEVEL 1;
+COMP "DIGIT<0>" LOCATE = SITE "N15" LEVEL 1;
+COMP "DIGIT<1>" LOCATE = SITE "P16" LEVEL 1;
+COMP "DIGIT<2>" LOCATE = SITE "P15" LEVEL 1;
+COMP "switch_dn" LOCATE = SITE "M18" LEVEL 1;
+COMP "switch_up" LOCATE = SITE "K17" LEVEL 1;
+SCHEMATIC END;
+

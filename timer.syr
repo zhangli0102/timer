@@ -1,0 +1,596 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: timer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "timer.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "timer"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : timer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/zhangli/src/fpga/timer/src/decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "/home/zhangli/src/fpga/timer/src/display.v" into library work
+Parsing module <display>.
+Analyzing Verilog file "/home/zhangli/src/fpga/timer/src/debouncer.v" into library work
+Parsing module <debouncer>.
+Analyzing Verilog file "/home/zhangli/src/fpga/timer/src/alarm.v" into library work
+Parsing module <alarm>.
+Analyzing Verilog file "/home/zhangli/src/fpga/timer/src/timer.v" into library work
+Parsing module <timer>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 33: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 34: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 35: Port state is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 36: Port state is not connected to this instance
+
+Elaborating module <timer>.
+
+Elaborating module <debouncer>.
+
+Elaborating module <alarm>.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/alarm.v" Line 31: Result of 27-bit expression is truncated to fit in 26-bit target.
+
+Elaborating module <display>.
+
+Elaborating module <decoder>.
+WARNING:HDLCompiler:189 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 47: Size mismatch in connection of port <DIGIT>. Formal port size is 3-bit while actual signal size is 4-bit.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 98: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 106: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 117: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 121: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 125: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/zhangli/src/fpga/timer/src/timer.v" Line 129: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <timer>.
+    Related source file is "/home/zhangli/src/fpga/timer/src/timer.v".
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 33: Output port <state> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 33: Output port <trans_dn> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 34: Output port <state> of the instance <d2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 34: Output port <trans_dn> of the instance <d2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 35: Output port <state> of the instance <d3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 35: Output port <trans_dn> of the instance <d3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 36: Output port <state> of the instance <d4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/zhangli/src/fpga/timer/src/timer.v" line 36: Output port <trans_dn> of the instance <d4> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state>.
+    Found 4-bit register for signal <secs>.
+    Found 4-bit register for signal <ten_secs>.
+    Found 4-bit register for signal <mins>.
+    Found 26-bit register for signal <prescaler>.
+    Found 4-bit register for signal <mins_stored>.
+    Found 1-bit register for signal <alarm_on>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <mins[3]_GND_1_o_add_1_OUT> created at line 98.
+    Found 26-bit adder for signal <prescaler[25]_GND_1_o_add_11_OUT> created at line 117.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_14_OUT<3:0>> created at line 121.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_16_OUT<3:0>> created at line 125.
+    Found 4-bit subtractor for signal <GND_1_o_GND_1_o_sub_18_OUT<3:0>> created at line 129.
+    Found 4-bit comparator greater for signal <secs[3]_GND_1_o_LessThan_15_o> created at line 122
+    Found 4-bit comparator greater for signal <ten_secs[3]_GND_1_o_LessThan_17_o> created at line 126
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <timer> synthesized.
+
+Synthesizing Unit <debouncer>.
+    Related source file is "/home/zhangli/src/fpga/timer/src/debouncer.v".
+    Found 1-bit register for signal <sync_1>.
+    Found 17-bit register for signal <count>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <sync_0>.
+    Found 17-bit adder for signal <count[16]_GND_2_o_add_5_OUT> created at line 52.
+    Found 1-bit comparator equal for signal <idle> created at line 41
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debouncer> synthesized.
+
+Synthesizing Unit <alarm>.
+    Related source file is "/home/zhangli/src/fpga/timer/src/alarm.v".
+    Found 1-bit register for signal <BUZZER>.
+    Found 26-bit register for signal <count>.
+    Found 26-bit adder for signal <count[25]_GND_3_o_add_1_OUT> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <alarm> synthesized.
+
+Synthesizing Unit <display>.
+    Related source file is "/home/zhangli/src/fpga/timer/src/display.v".
+    Found 2-bit register for signal <digit_posn>.
+    Found 4-bit register for signal <digit_data>.
+    Found 3-bit register for signal <DIGIT>.
+    Found 24-bit register for signal <prescaler>.
+    Found 24-bit adder for signal <prescaler[23]_GND_4_o_add_1_OUT> created at line 36.
+    Found 2-bit adder for signal <digit_posn[1]_GND_4_o_add_3_OUT> created at line 40.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <display> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "/home/zhangli/src/fpga/timer/src/decoder.v".
+    Found 8-bit register for signal <SEG>.
+    Found 16x8-bit Read Only RAM for signal <D[3]_PWR_5_o_wide_mux_1_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <decoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 12
+ 17-bit adder                                          : 4
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 26-bit adder                                          : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 3
+# Registers                                            : 29
+ 1-bit register                                        : 14
+ 17-bit register                                       : 4
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 26-bit register                                       : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 5
+ 8-bit register                                        : 1
+# Comparators                                          : 6
+ 1-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 15
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 14
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <alarm>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <alarm> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debouncer>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <decoder>.
+INFO:Xst:3231 - The small RAM <Mram_D[3]_PWR_5_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <D>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <display>.
+The following registers are absorbed into counter <prescaler>: 1 register on signal <prescaler>.
+The following registers are absorbed into counter <digit_posn>: 1 register on signal <digit_posn>.
+Unit <display> synthesized (advanced).
+
+Synthesizing (advanced) Unit <timer>.
+The following registers are absorbed into counter <prescaler>: 1 register on signal <prescaler>.
+Unit <timer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 4
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 3
+# Counters                                             : 8
+ 17-bit up counter                                     : 4
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+ 26-bit up counter                                     : 2
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+# Comparators                                          : 6
+ 1-bit comparator equal                                : 4
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 8
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 12
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:1710 - FF/Latch <SEG_0> (without init value) has a constant value of 1 in block <decoder>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <timer> ...
+WARNING:Xst:1293 - FF/Latch <ten_secs_3> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <debouncer> ...
+
+Optimizing unit <display> ...
+
+Optimizing unit <decoder> ...
+WARNING:Xst:1293 - FF/Latch <prescaler_24> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <prescaler_25> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_23> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_22> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_21> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_20> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_19> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_18> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_17> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d/prescaler_16> (without init value) has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <alarm_on> in Unit <timer> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block timer, actual ratio is 4.
+
+Final Macro Processing ...
+
+Processing Unit <timer> :
+	Found 2-bit shift register for signal <d4/sync_1>.
+	Found 2-bit shift register for signal <d3/sync_1>.
+	Found 2-bit shift register for signal <d2/sync_1>.
+	Found 2-bit shift register for signal <d1/sync_1>.
+Unit <timer> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 172
+ Flip-Flops                                            : 172
+# Shift Registers                                      : 4
+ 2-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : timer.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 523
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 127
+#      LUT2                        : 11
+#      LUT3                        : 7
+#      LUT4                        : 21
+#      LUT5                        : 25
+#      LUT6                        : 60
+#      MUXCY                       : 127
+#      VCC                         : 1
+#      XORCY                       : 134
+# FlipFlops/Latches                : 176
+#      FD                          : 47
+#      FDE                         : 17
+#      FDR                         : 110
+#      FDRE                        : 2
+# Shift Registers                  : 4
+#      SRLC16E                     : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 4
+#      OBUF                        : 13
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             176  out of  11440     1%  
+ Number of Slice LUTs:                  264  out of   5720     4%  
+    Number used as Logic:               260  out of   5720     4%  
+    Number used as Memory:                4  out of   1440     0%  
+       Number used as SRL:                4
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    264
+   Number with an unused Flip Flop:      88  out of    264    33%  
+   Number with an unused LUT:             0  out of    264     0%  
+   Number of fully used LUT-FF pairs:   176  out of    264    66%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    200     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 180   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.356ns (Maximum Frequency: 186.723MHz)
+   Minimum input arrival time before clock: 1.801ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.356ns (frequency: 186.723MHz)
+  Total number of paths / destination ports: 4828 / 303
+-------------------------------------------------------------------------
+Delay:               5.356ns (Levels of Logic = 3)
+  Source:            prescaler_14 (FF)
+  Destination:       mins_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: prescaler_14 to mins_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  prescaler_14 (prescaler_14)
+     LUT5:I0->O            1   0.203   0.827  prescaler[25]_GND_1_o_equal_13_o<25>4 (prescaler[25]_GND_1_o_equal_13_o<25>3)
+     LUT6:I2->O           32   0.203   1.539  prescaler[25]_GND_1_o_equal_13_o<25>5 (prescaler[25]_GND_1_o_equal_13_o)
+     LUT6:I2->O            2   0.203   0.616  _n0208_inv2 (_n0208_inv)
+     FDE:CE                    0.322          mins_0
+    ----------------------------------------
+    Total                      5.356ns (1.378ns logic, 3.978ns route)
+                                       (25.7% logic, 74.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            switch_start_stop (PAD)
+  Destination:       d4/Mshreg_sync_1 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: switch_start_stop to d4/Mshreg_sync_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  switch_start_stop_IBUF (switch_start_stop_IBUF)
+     SRLC16E:D                -0.060          d4/Mshreg_sync_1
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            a/BUZZER (FF)
+  Destination:       BUZZER (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: a/BUZZER to BUZZER
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  a/BUZZER (a/BUZZER)
+     OBUF:I->O                 2.571          BUZZER_OBUF (BUZZER)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.356|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.05 secs
+ 
+--> 
+
+
+Total memory usage is 388612 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

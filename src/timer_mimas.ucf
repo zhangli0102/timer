@@ -1,0 +1,21 @@
+NET "CLK" LOC = D9;
+
+NET "switch_up" LOC = "K17" | PULLUP;
+NET "switch_dn" LOC = "M18" | PULLUP;
+NET "switch_cancel" LOC = "K18" | PULLUP;
+NET "switch_start_stop" LOC = "L18" | PULLUP;
+
+NET "SEG[7]" LOC = A3;
+NET "SEG[6]" LOC = B4;
+NET "SEG[5]" LOC = A4;
+NET "SEG[4]" LOC = C4;
+NET "SEG[3]" LOC = C5;
+NET "SEG[2]" LOC = D6;
+NET "SEG[1]" LOC = C6;
+NET "SEG[0]" LOC = A5;
+
+NET "DIGIT[2]" LOC = P15;
+NET "DIGIT[1]" LOC = P16;
+NET "DIGIT[0]" LOC = N15;
+
+NET "BUZZER" LOC = U7; 

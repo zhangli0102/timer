@@ -1,0 +1,5 @@
+verilog work "src/decoder.v"
+verilog work "src/display.v"
+verilog work "src/debouncer.v"
+verilog work "src/alarm.v"
+verilog work "src/timer.v"
